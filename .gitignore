@@ -1,3 +1,15 @@
 .claude/
+
+# Original Claude-design exports (source files, not served)
 オービタルAIサポート (standalone).html
 オービタルAIサポート レトロ (standalone).html
+
+# Original source images (the served copies live in images/)
+アイコン.png
+44歳でAI事業・・・.webp
+開業準備で・・・.webp
+非エンジニアでも・・・.webp
+
+# temp / build / screenshot artifacts
+_*.js
+_*.png
