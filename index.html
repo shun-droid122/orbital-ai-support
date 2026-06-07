@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>オービタルAIサポート</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0d1130;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    h1 { font-size: clamp(28px, 6vw, 48px); letter-spacing: 0.04em; margin-bottom: 12px; }
+    p.sub { color: #9fb3d8; margin-bottom: 40px; font-size: 15px; }
+    .cards { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    a.card {
+      display: block;
+      width: 260px;
+      padding: 32px 24px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(84,216,255,0.3);
+      border-radius: 16px;
+      color: #fff;
+      text-decoration: none;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+    a.card:hover {
+      transform: translateY(-4px);
+      border-color: #54d8ff;
+      background: rgba(84,216,255,0.1);
+    }
+    a.card .title { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+    a.card .desc { font-size: 13px; color: #9fb3d8; }
+    footer { margin-top: 48px; font-size: 12px; color: #5a6b8c; }
+  </style>
+</head>
+<body>
+  <h1>オービタルAIサポート</h1>
+  <p class="sub">ご覧になるバージョンをお選びください</p>
+  <div class="cards">
+    <a class="card" href="standard.html">
+      <div class="title">通常版</div>
+      <div class="desc">標準デザイン</div>
+    </a>
+    <a class="card" href="retro.html">
+      <div class="title">レトロ版</div>
+      <div class="desc">RETRO MODE</div>
+    </a>
+  </div>
+  <footer>© オービタルAIサポート</footer>
+</body>
+</html>
