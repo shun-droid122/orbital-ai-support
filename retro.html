@@ -165,7 +165,20 @@ section{ scroll-margin-top:80px; position:relative; z-index:1; }
 .gnav a:not(.btn):hover{ color:var(--amber); }
 .gnav a:not(.btn)::before{ content:"› "; color:var(--line-2); }
 .gnav .btn{ padding:9px 18px; font-size:13px; box-shadow:3px 3px 0 rgba(0,0,0,.5); }
-@media (max-width:900px){ .gnav a:not(.btn){ display:none; } }
+.gnav a.std-toggle{
+  display:inline-flex; align-items:center; gap:5px;
+  font-family:var(--jp); font-size:13px; color:var(--cyan);
+  background:var(--bg3); border:2px solid var(--line-2); padding:6px 12px;
+  box-shadow:3px 3px 0 rgba(0,0,0,.5);
+  transition:transform .08s steps(2), box-shadow .08s steps(2);
+}
+.gnav a.std-toggle::before{ content:none; }
+.gnav a.std-toggle:hover{
+  color:var(--amber); border-color:var(--amber);
+  transform:translate(2px,2px); box-shadow:1px 1px 0 rgba(0,0,0,.5);
+}
+@media (max-width:900px){ .gnav a:not(.btn):not(.std-toggle){ display:none; } }
+@media (max-width:430px){ .gnav{ gap:10px; } .gnav a.std-toggle{ font-size:12px; padding:5px 9px; } }
 
 /* ---------- ヒーロー ---------- */
 .hero{ padding:56px 0 84px; }
@@ -483,6 +496,7 @@ section{ scroll-margin-top:80px; position:relative; z-index:1; }
       <a href="#price">料金</a>
       <a href="#profile">プロフィール</a>
       <a href="#faq">Q&amp;A</a>
+      <a class="std-toggle" href="standard.html" aria-label="通常版で見る">□ 通常版</a>
       <a class="btn btn-primary" href="#contact">無料相談</a>
     </nav>
   </div>
@@ -936,7 +950,7 @@ section{ scroll-margin-top:80px; position:relative; z-index:1; }
 /* ---- お問い合わせフォーム ----
    FormspreeやGAS等のエンドポイントURLを FORM_ENDPOINT に設定してください。
    例: "https://formspree.io/f/xxxxxxxx" */
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/mamuu0122@yahoo.co.jp"; // FormSubmit.co（今村さんのYahooメールに届きます）
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/orbital.ai.61@gmail.com"; // FormSubmit.co（お問い合わせはこのGmailに届きます）
 const form = document.getElementById("contactForm");
 const alertBox = document.getElementById("formAlert");
 const thanks = document.getElementById("formThanks");
